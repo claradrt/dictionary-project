@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import "./Search.css";
+import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default function Search() {
   const [searchValue, setSearchValue] = useState("");
+
+  function handleResponse(response) {
+    console.log(response.data);
+  }
+
   function search(event) {
     event.preventDefault();
-    alert(searchValue);
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchValue}`;
+    axios.get(apiUrl).then(handleResponse);
   }
 
   function handleSearchValueChange(event) {
