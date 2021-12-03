@@ -10,7 +10,14 @@ export default function App() {
         </header>
         <Dictionary />
         <footer className="text-center mt-3">
-          Open source code by Clara Dérot
+          <a
+            href="https://github.com/claradrt/dictionary-project"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open source code
+          </a>{" "}
+          by Clara Dérot
         </footer>
       </div>
     </div>
