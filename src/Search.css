@@ -1,0 +1,17 @@
+.search-wrapper {
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 6px;
+  width: fit-content;
+  padding: 2px 5px;
+}
+
+.search-wrapper input,
+.search-wrapper button {
+  border: none;
+  background: none;
+}
+
+.search-wrapper input:focus-visible {
+  outline: none;
+}

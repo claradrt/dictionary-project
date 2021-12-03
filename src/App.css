@@ -1,0 +1,12 @@
+body {
+  background-color: #deba9d;
+}
+
+header h1 {
+  color: #6f4c5b;
+}
+
+.App .container {
+  margin: 10px auto;
+  width: 60%;
+}
