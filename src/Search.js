@@ -4,11 +4,12 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-export default function Search() {
+export default function Search(props) {
   const [searchValue, setSearchValue] = useState("");
 
   function handleResponse(response) {
-    console.log(response.data);
+    console.log(response.data[0]);
+    props.onSearch(response.data[0]);
   }
 
   function search(event) {
