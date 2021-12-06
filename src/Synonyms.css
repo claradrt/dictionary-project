@@ -1,0 +1,19 @@
+.SynonymList {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding-left: 0px;
+}
+
+.SynonymList li {
+  border: 1px solid black !important;
+  border-radius: 4px !important;
+  display: inline-block;
+  padding: 2px;
+  margin: 2px;
+  height: fit-content;
+  width: fit-content;
+  background-color: transparent;
+  white-space: nowrap;
+}
