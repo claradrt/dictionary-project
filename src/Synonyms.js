@@ -2,7 +2,6 @@ import React from "react";
 import "./Synonyms.css";
 
 export default function Synonyms(props) {
-  console.log("Synonyms:", props.synonyms);
   if (props.synonyms.length > 0) {
     return (
       <div className="synonyms-wrapper mt-2 mb-3">

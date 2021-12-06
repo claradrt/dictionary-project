@@ -3,7 +3,6 @@ import Synonyms from "./Synonyms.js";
 import "./Meaning.css";
 
 export default function Meaning(props) {
-  console.log(props.meaning);
   return (
     <section className="Meaning">
       <h3 className="text-capitalize mt-4">{props.meaning.partOfSpeech}</h3>

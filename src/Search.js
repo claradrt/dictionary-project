@@ -7,15 +7,25 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 export default function Search(props) {
   const [searchValue, setSearchValue] = useState("");
 
-  function handleResponse(response) {
-    console.log(response.data[0]);
+  function handleDictionaryResponse(response) {
     props.onSearch(response.data[0]);
+  }
+
+  function handlePexelsResponse(response) {
+    console.log(response.data.photos);
+    props.getPics(response.data.photos);
   }
 
   function search(event) {
     event.preventDefault();
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchValue}`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleDictionaryResponse);
+
+    let pexelsApiKey =
+      "563492ad6f917000010000015f07001e5247413ba14c5fb9d332d575";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${searchValue}&per_page=6`;
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   }
 
   function handleSearchValueChange(event) {

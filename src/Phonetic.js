@@ -5,8 +5,6 @@ import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 import { faPlayCircle as farPlayCircle } from "@fortawesome/free-regular-svg-icons";
 
 export default function Phonetic(props) {
-  console.log("Phonetics", props.phonetic);
-
   return (
     <span className="Phonetics">
       {props.phonetic.audio && (
