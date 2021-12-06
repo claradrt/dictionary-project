@@ -23,17 +23,20 @@ export default function Search(props) {
   }
 
   return (
-    <form className="Search text-center" onSubmit={search}>
-      <div className="search-wrapper">
-        <input
-          type="text"
-          placeholder="Enter a word..."
-          onChange={handleSearchValueChange}
-        />
-        <button type="submit">
-          <FontAwesomeIcon icon={faSearch} />
-        </button>
-      </div>
-    </form>
+    <section>
+      <form className="Search text-center" onSubmit={search}>
+        <h1 className="text-center mb-3">What word do you want to look up?</h1>
+        <div className="search-wrapper">
+          <input
+            type="text"
+            placeholder="Search for a word..."
+            onChange={handleSearchValueChange}
+          />
+          <button type="submit">
+            <FontAwesomeIcon icon={faSearch} color="#31112C" />
+          </button>
+        </div>
+      </form>
+    </section>
   );
 }

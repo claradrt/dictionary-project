@@ -1,9 +1,10 @@
 .search-wrapper {
   margin: 0 auto;
-  border: 1px solid black;
+  border: 1px solid #31112c;
   border-radius: 6px;
   width: fit-content;
   padding: 2px 5px;
+  color: #31112c;
 }
 
 .search-wrapper input,
@@ -14,4 +15,8 @@
 
 .search-wrapper input:focus-visible {
   outline: none;
+}
+
+.Search h1 {
+  font-size: 25px;
 }

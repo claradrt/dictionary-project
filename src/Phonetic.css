@@ -1,0 +1,18 @@
+.Phonetics a {
+  color: #7d0633;
+  text-decoration: none;
+  padding-right: 10px;
+}
+
+.Phonetics a #empty-play-icon,
+.Phonetics a:hover #full-play-icon {
+  display: none;
+}
+
+.Phonetics a:hover #empty-play-icon {
+  display: inline;
+}
+
+.Phonetics a .icon {
+  font-size: 20px;
+}

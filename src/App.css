@@ -1,12 +1,46 @@
 body {
-  background-color: #deba9d;
+  background-color: rgb(125, 6, 51);
+  font-family: "Lora", serif;
+  color: #31112c;
 }
 
 header h1 {
-  color: #6f4c5b;
+  color: #fbdcc4;
 }
 
 .App .container {
   margin: 10px auto;
-  width: 60%;
+  width: 70%;
+}
+
+footer a {
+  color: #fbdcc4;
+  text-decoration: none;
+}
+
+footer {
+  color: #f2a07b;
+}
+
+footer a:hover {
+  color: #fbdcc4;
+  text-decoration: underline;
+}
+
+.icon {
+  padding: 0px 3px;
+}
+
+section {
+  background-color: #fbdcc4;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+}
+
+@media (max-width: 400px) {
+  .App .container {
+    width: 90%;
+  }
 }
