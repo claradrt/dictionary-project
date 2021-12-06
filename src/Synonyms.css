@@ -21,6 +21,12 @@
   font-size: 13px;
 }
 
+.SynonymList li:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(125, 6, 51);
+}
+
 .synonyms-wrapper p {
   margin-bottom: 2px;
 }
