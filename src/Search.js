@@ -27,7 +27,12 @@ export default function Search(props) {
 
   function callApis(keyword) {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios.get(apiUrl).then(handleDictionaryResponse);
+    axios
+      .get(apiUrl)
+      .then(handleDictionaryResponse)
+      .catch(() => {
+        alert("Could not find results for this keyword");
+      });
 
     let pexelsApiKey =
       "563492ad6f917000010000015f07001e5247413ba14c5fb9d332d575";
