@@ -14,7 +14,7 @@ export default function Phonetic(props) {
   return (
     <span className="Phonetics">
       {props.phonetic.audio && (
-        <a href="#" onClick={handleAudioClick}>
+        <a href="/" onClick={handleAudioClick}>
           <span className="icon" id="full-play-icon">
             <FontAwesomeIcon icon={faPlayCircle} />
           </span>
