@@ -15,6 +15,7 @@ export default function Dictionary() {
 
   function getSearchResults(searchResults) {
     setResults(searchResults);
+    setKeyword("");
   }
 
   function getPicResults(photoResults) {
