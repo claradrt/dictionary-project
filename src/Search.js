@@ -60,6 +60,7 @@ export default function Search(props) {
             type="text"
             placeholder="Search for a word..."
             onChange={handleSearchValueChange}
+            value={searchValue}
           />
           <button type="submit">
             <FontAwesomeIcon icon={faSearch} color="#31112C" />
