@@ -7,6 +7,11 @@ import Photos from "./Photos.js";
 export default function Dictionary() {
   const [results, setResults] = useState("");
   const [photos, setPhotos] = useState("");
+  const [keyword, setKeyword] = useState("");
+
+  function onSynonymSelect(synonym) {
+    setKeyword(synonym);
+  }
 
   function getSearchResults(searchResults) {
     setResults(searchResults);
@@ -18,8 +23,14 @@ export default function Dictionary() {
 
   return (
     <div className="Dictionary">
-      <Search onSearch={getSearchResults} getPics={getPicResults} />
-      {results && <Results results={results} />}
+      <Search
+        onSearch={getSearchResults}
+        getPics={getPicResults}
+        keyword={keyword}
+      />
+      {results && (
+        <Results results={results} onSynonymSelect={onSynonymSelect} />
+      )}
       {photos && <Photos photos={photos} />}
     </div>
   );

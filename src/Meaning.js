@@ -13,7 +13,10 @@ export default function Meaning(props) {
               <li className="mb-4">
                 {definition.definition} <br />
                 <em className="example"> {definition.example}</em>
-                <Synonyms synonyms={definition.synonyms} />
+                <Synonyms
+                  synonyms={definition.synonyms}
+                  onSynonymSelect={props.onSynonymSelect}
+                />
               </li>
             </div>
           );

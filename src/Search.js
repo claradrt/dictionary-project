@@ -18,12 +18,20 @@ export default function Search(props) {
 
   function search(event) {
     event.preventDefault();
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchValue}`;
+    if (searchValue !== "") {
+      callApis(searchValue);
+    } else {
+      alert("Please enter a keyword");
+    }
+  }
+
+  function callApis(keyword) {
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleDictionaryResponse);
 
     let pexelsApiKey =
       "563492ad6f917000010000015f07001e5247413ba14c5fb9d332d575";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${searchValue}&per_page=6`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
     let headers = { Authorization: `Bearer ${pexelsApiKey}` };
     axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   }
@@ -32,12 +40,18 @@ export default function Search(props) {
     setSearchValue(event.target.value);
   }
 
+  if (props.keyword && props.keyword !== searchValue) {
+    setSearchValue(props.keyword);
+    callApis(props.keyword);
+  }
+
   return (
     <section>
       <form className="Search text-center" onSubmit={search}>
         <h1 className="text-center mb-3">What word do you want to look up?</h1>
         <div className="search-wrapper">
           <input
+            id="searchInput"
             type="text"
             placeholder="Search for a word..."
             onChange={handleSearchValueChange}

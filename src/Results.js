@@ -19,7 +19,10 @@ export default function Results(props) {
       {props.results.meanings.map((meaning, index) => {
         return (
           <div key={index}>
-            <Meaning meaning={meaning} />
+            <Meaning
+              onSynonymSelect={props.onSynonymSelect}
+              meaning={meaning}
+            />
           </div>
         );
       })}

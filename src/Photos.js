@@ -2,8 +2,6 @@ import React from "react";
 import "./Photos.css";
 
 export default function Photos(props) {
-  console.log("Received by Photos component:", props.photos);
-
   return (
     <section className="Photos">
       <div className="row g-0">
